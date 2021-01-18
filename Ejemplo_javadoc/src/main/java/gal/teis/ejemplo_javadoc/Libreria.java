@@ -11,7 +11,7 @@ public class Libreria {
     public static int ejer1_Factorial(int num) {
         int fact = 1;
         for (int i = 2; i <= num; i++) {
-            fact *= i;
+            fact *= i;;
         }
         return fact;
     }
@@ -97,6 +97,20 @@ public class Libreria {
    */  
     
     public static StringBuilder ejer6_Escalera(int tope) {
+        StringBuilder escalera = new StringBuilder("");
+        StringBuilder peldano = new StringBuilder("");
+        for (int i = 0; i <= tope; ++i) {
+            for (int j = 1; j <= i; j++) {
+                peldano.append(j);
+            }
+            escalera.append(peldano + "\n");
+            peldano.setLength(0);
+        }
+        return escalera;
+    }
+    
+    
+    public static StringBuilder ejer7_Escaleracopia(int tope) {
         StringBuilder escalera = new StringBuilder("");
         StringBuilder peldano = new StringBuilder("");
         for (int i = 0; i <= tope; ++i) {
